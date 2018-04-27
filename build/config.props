@@ -26,7 +26,12 @@
     <MoqVersion>4.7.145</MoqVersion>
     <FluentAssertionsVersion>4.19.4</FluentAssertionsVersion>
     <MicrosoftBuildPackageVersion>15.1.1012</MicrosoftBuildPackageVersion>
+    <SystemSecurityCryptographyProtectedDataPackageVersion>4.3.0</SystemSecurityCryptographyProtectedDataPackageVersion>
   </PropertyGroup>
+
+  <!-- Override isolated build dependency versions with product build's. -->
+  <Import Project="$(DotNetPackageVersionPropsPath)"
+          Condition=" '$(DotNetPackageVersionPropsPath)' != '' " />
 
   <!-- Config -->
   <PropertyGroup>
